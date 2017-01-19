@@ -1,5 +1,44 @@
 @charset "utf-8";
 @import "./_com";
 
+.header_hd{
+  height: px2rem(80px);
+  background:#dd3f39 ;
+  color: #fff;
+  a{
+    color: #fff;
+    position: absolute;
+    left:px2rem(30px);
+    line-height: px2rem(80px);
+  }
+  h1{
+    height: 100%;
+    line-height: px2rem(80px);
+    text-align: center;
+    font-weight: bold;
+    width: px2rem(750px);
+    background: #fff;
+  }
+}
 
+.help_ul{
+
+}
+
+.home_dl{
+  dt{
+    background: #f4f4f8;
+    height: px2rem(60px);
+    line-height: px2rem(60px);
+    font-weight: bold;
+  }
+  dd{
+    height: px2rem(100px);
+    line-height: px2rem(100px);
+    border-bottom:1px solid #b4b4b4;
+    a{
+      color: #a0a0a0;
+    }
+  }
+}
 

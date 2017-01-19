@@ -3,9 +3,10 @@
  */
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
+import Header from './Header'
 import Help from './Help'
 
-export default class App extends Component{
+class App extends Component{
   constructor(props){
     super(props);
     this.state={}
@@ -13,7 +14,6 @@ export default class App extends Component{
 
   render(){
     const {page} = this.props;
-    let page=0;
     return (
       <div>
         <Header />

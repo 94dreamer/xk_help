@@ -1,6 +1,8 @@
 /**
  * Created by zhouzhen on 2017/1/18.
  */
+require("./css/index.scss");
+
 import React,{PropTypes} from 'react';
 import {render} from 'react-dom';
 

@@ -7,12 +7,12 @@ export default class Help extends Component{
 
   render(){
     return (
-      <ul>
+      <ul className="help_ul">
         <li>
-          <dl>
+          <dl className="home_dl">
             <dt> 一 权限设置</dt>
-            <dd>1.IOS系统权限设置</dd>
-            <dd>2.安卓系统权限设置</dd>
+            <dd>1.IOS系统权限设置 <a>&gt;</a></dd>
+            <dd>2.安卓系统权限设置 <a>&gt;</a></dd>
             <dd>注：应用过程中80%左右的问题是由于权限不够导致的，如遇问题请先检查权限设置是否完整正确</dd>
           </dl>
         </li>
