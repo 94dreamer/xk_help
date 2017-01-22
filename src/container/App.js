@@ -4,12 +4,16 @@
 import React,{Component} from 'react';
 import {connect} from 'react-redux';
 import Header from './Header'
-import Help from './Help'
-
+import Help from './Help';
+import DetailOne1 from  './DetailOne1';
 class App extends Component{
   constructor(props){
     super(props);
     this.state={}
+    this.pageList={
+      0:<Help />,
+      11:<DetailOne1 />
+    }
   }
 
   render(){
@@ -17,7 +21,7 @@ class App extends Component{
     return (
       <div>
         <Header />
-        {page===0?<Help />:null}
+        {this.pageList[page]}
       </div>
     )
   }

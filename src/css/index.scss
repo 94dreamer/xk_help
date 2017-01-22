@@ -5,11 +5,13 @@
   height: px2rem(80px);
   background:#dd3f39 ;
   color: #fff;
+  font-size: px2rem(36px);
   a{
     color: #fff;
     position: absolute;
     left:px2rem(30px);
     line-height: px2rem(80px);
+    font-weight: bold;
   }
   h1{
     height: 100%;
@@ -25,19 +27,28 @@
 }
 
 .home_dl{
+  font-size: px2rem(28px);
   dt{
+    padding-left: px2rem(18px);
     background: #f4f4f8;
     height: px2rem(60px);
     line-height: px2rem(60px);
     font-weight: bold;
   }
   dd{
-    height: px2rem(100px);
-    line-height: px2rem(100px);
+    padding: px2rem(30px) 0 px2rem(30px) px2rem(18px);
+    line-height: px2rem(40px);
     border-bottom:1px solid #b4b4b4;
+    &.return_dd{
+      padding-left: px2rem(30px);
+    }
     a{
       color: #a0a0a0;
+      float: right;
+      font-weight: bold;
+      margin-right: px2rem(40px);
     }
   }
 }
+
 
