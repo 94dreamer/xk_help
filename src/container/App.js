@@ -6,13 +6,15 @@ import {connect} from 'react-redux';
 import Header from './Header'
 import Help from './Help';
 import DetailOne1 from  './DetailOne1';
+import DetailOne2 from  './DetailOne2';
 class App extends Component{
   constructor(props){
     super(props);
     this.state={}
     this.pageList={
       0:<Help />,
-      11:<DetailOne1 />
+      11:<DetailOne1 />,
+      12:<DetailOne2 />
     }
   }
 

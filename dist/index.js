@@ -23252,6 +23252,10 @@
 
 	var _DetailOne2 = _interopRequireDefault(_DetailOne);
 
+	var _DetailOne3 = __webpack_require__(226);
+
+	var _DetailOne4 = _interopRequireDefault(_DetailOne3);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -23274,7 +23278,8 @@
 	    _this.state = {};
 	    _this.pageList = {
 	      0: _react2.default.createElement(_Help2.default, null),
-	      11: _react2.default.createElement(_DetailOne2.default, null)
+	      11: _react2.default.createElement(_DetailOne2.default, null),
+	      12: _react2.default.createElement(_DetailOne4.default, null)
 	    };
 	    return _this;
 	  }
@@ -23937,6 +23942,166 @@
 /* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(14);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _DetailDl = __webpack_require__(225);
+
+	var _DetailDl2 = _interopRequireDefault(_DetailDl);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by zhouzhen on 2017/1/18.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var DetailOne1 = function (_Component) {
+	  _inherits(DetailOne1, _Component);
+
+	  function DetailOne1(props) {
+	    _classCallCheck(this, DetailOne1);
+
+	    var _this = _possibleConstructorReturn(this, (DetailOne1.__proto__ || Object.getPrototypeOf(DetailOne1)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(DetailOne1, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'dl',
+	          { className: 'detail_dl' },
+	          _react2.default.createElement(
+	            'dt',
+	            null,
+	            'IOS\u7CFB\u7EDF-\u4FE1\u4EFB\u9500\u63A7APP'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u4E00\u6B65 \u8FDB\u5165\u8BBE\u7F6E\u9875\u9762\uFF0C\u70B9\u51FB\u3010\u901A\u7528\u3011'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/111.png', alt: '' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u4E8C\u6B65 \u8FDB\u5165\u901A\u7528\u9875\u9762\uFF0C\u70B9\u51FB\u3010\u8BBE\u5907\u7BA1\u7406\u3011'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/112.png', alt: '' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u4E09\u6B65 \u8FDB\u5165\u8BBE\u5907\u7BA1\u7406\u9875\u9762\uFF0C\u70B9\u51FB\u3010\u4FE1\u4EFB\u3011'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/113.png', alt: '' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u56DB\u6B65 \u663E\u793A\u3010\u5DF2\u9A8C\u8BC1\u3011'
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/114.png', alt: '' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          'dl',
+	          { className: 'detail_dl' },
+	          _react2.default.createElement(
+	            'dt',
+	            null,
+	            'IOS\u7CFB\u7EDF-\u6743\u9650\u8BBE\u7F6E'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u4E00\u6B65 \u8FDB\u5165\u8BBE\u7F6E\u9875\u9762\uFF0C\u70B9\u51FB\u3010\u9500\u552E\u7BA1\u7406\u3011 '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/115.png', alt: '' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            null,
+	            _react2.default.createElement(
+	              'h4',
+	              null,
+	              '\u7B2C\u4E8C\u6B65 \u6309\u7167\u4E0B\u56FE\u8FDB\u884C\u6743\u9650\u8BBE\u7F6E '
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement('img', { src: '.src/img/116.png', alt: '' })
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return DetailOne1;
+	}(_react.Component);
+
+	exports.default = DetailOne1;
+
+/***/ },
+/* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
@@ -23956,6 +24121,93 @@
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by zhouzhen on 2017/1/22.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+
+
+	var DetailDl = function (_Component) {
+	  _inherits(DetailDl, _Component);
+
+	  function DetailDl(props) {
+	    _classCallCheck(this, DetailDl);
+
+	    var _this = _possibleConstructorReturn(this, (DetailDl.__proto__ || Object.getPrototypeOf(DetailDl)).call(this, props));
+
+	    _this.state = {};
+	    return _this;
+	  }
+
+	  _createClass(DetailDl, [{
+	    key: "render",
+	    value: function render() {
+	      var data = this.props.data;
+
+	      return _react2.default.createElement(
+	        "div",
+	        null,
+	        _react2.default.Children.map(data, function (N) {
+	          return _react2.default.createElement(
+	            "dl",
+	            { className: "detail_dl" },
+	            _react2.default.createElement(
+	              "dt",
+	              null,
+	              "N.title"
+	            ),
+	            _react2.default.Children.map(N, function (n) {
+	              return _react2.default.createElement(
+	                "dd",
+	                null,
+	                _react2.default.createElement(
+	                  "h4",
+	                  null,
+	                  "n.h4"
+	                ),
+	                _react2.default.createElement(
+	                  "div",
+	                  null,
+	                  _react2.default.createElement("img", { src: ".src/img/" + n.img + ".png", alt: "" })
+	                )
+	              );
+	            })
+	          );
+	        })
+	      );
+	    }
+	  }]);
+
+	  return DetailDl;
+	}(_react.Component);
+
+	exports.default = DetailDl;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(14);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _DetailDl = __webpack_require__(225);
+
+	var _DetailDl2 = _interopRequireDefault(_DetailDl);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Created by zhouzhen on 2017/1/18.
 	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 
@@ -23963,20 +24215,154 @@
 	var DetailOne1 = function (_Component) {
 	  _inherits(DetailOne1, _Component);
 
-	  function DetailOne1() {
+	  function DetailOne1(props) {
 	    _classCallCheck(this, DetailOne1);
 
-	    return _possibleConstructorReturn(this, (DetailOne1.__proto__ || Object.getPrototypeOf(DetailOne1)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (DetailOne1.__proto__ || Object.getPrototypeOf(DetailOne1)).call(this, props));
+
+	    _this.state = {};
+	    _this.json = {
+	      1: [{
+	        title: "安卓系统-权限设置",
+	        content: [{
+	          h4: "第一步  进入设置页面，点击【应用管理】",
+	          img: "121"
+	        }, {
+	          h4: "第二步  进入应用管理页面，点击【销售管理】",
+	          img: "122"
+	        }, {
+	          h4: "第三步  进入应用信息页面，点击【权限】",
+	          img: "123"
+	        }, {
+	          h4: "第四步  将所有权限打开",
+	          img: "124"
+	        }]
+	      }],
+	      2: [{
+	        title: "安卓系统-信任销控APP",
+	        content: [{
+	          h4: "第一步  进入设置页面，点击【权限管理】",
+	          img: "125"
+	        }, {
+	          h4: "第二步  进入权限管理页面，点击【销售管理】",
+	          img: "126"
+	        }, {
+	          h4: "第三步  参考下图进行权限设置",
+	          img: "127"
+	        }]
+	      }, {
+	        title: "安卓系统-权限设置",
+	        content: [{
+	          h4: "第一步  进入设置页面，点击【应用管理】",
+	          img: "128"
+	        }, {
+	          h4: "第二步  进入应用管理页面，点击【销售管理】",
+	          img: "129"
+	        }, {
+	          h4: "第三步  进入应用信息页面，点击【权限】",
+	          img: "1210"
+	        }, {
+	          h4: "第四步  参考下图进行权限设置",
+	          img: "1211"
+	        }]
+	      }],
+	      3: [{
+	        title: "安卓系统-权限设置",
+	        content: [{
+	          h4: "第一步  进入设置页面，点击【其他应用管理】",
+	          img: "1212"
+	        }, {
+	          h4: "第二步  进入应用管理页面，点击【销售管理】",
+	          img: "1213"
+	        }, {
+	          h4: "第三步  进入应用信息页面，点击【权限管理】",
+	          img: "1214"
+	        }, {
+	          h4: "第四步  将所有权限打开",
+	          img: "1215"
+	        }]
+	      }],
+	      4: [{
+	        title: "安卓系统-权限设置",
+	        content: [{
+	          h4: "第一步  进入设置页面，点击【其他应用管理】",
+	          img: "1216"
+	        }, {
+	          h4: "第二步  进入应用管理页面，点击【销售管理】",
+	          img: "1217"
+	        }, {
+	          h4: "第三步  进入应用信息页面，点击【权限管理】",
+	          img: "1218"
+	        }, {
+	          h4: "第四步  将所有权限打开",
+	          img: "1219"
+	        }]
+	      }],
+	      5: [{
+	        title: "安卓系统-权限设置",
+	        content: [{
+	          h4: "第一步  打开【I管家】",
+	          img: "1220"
+	        }, {
+	          h4: "第二步  进入i管家页面，点击【软件管理】",
+	          img: "1221"
+	        }, {
+	          h4: "第三步  进入软件管理页面，点击【软件权限管理】",
+	          img: "1222"
+	        }, {
+	          h4: "第四步  进入软件权限管理页面，点击【销售管理】",
+	          img: "1223"
+	        }, {
+	          h4: "第五步 信任该软件，并将所有权限打卡",
+	          img: "1224"
+	        }]
+	      }]
+	    };
+	    return _this;
 	  }
 
 	  _createClass(DetailOne1, [{
-	    key: "render",
+	    key: 'render',
 	    value: function render() {
+	      var type = 1;
 	      return _react2.default.createElement(
-	        "dl",
-	        { className: "detail_ul" },
-	        _react2.default.createElement("dt", null),
-	        _react2.default.createElement("dd", null)
+	        'div',
+	        null,
+	        _react2.default.createElement(
+	          'dl',
+	          null,
+	          _react2.default.createElement(
+	            'dt',
+	            null,
+	            '\u8BF7\u9009\u62E9\u4F7F\u7528\u7684\u673A\u578B\uFF1A'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            { className: type === 1 ? "current" : null },
+	            '\u4E09\u661F'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            { className: type === 2 ? "current" : null },
+	            '\u534E\u4E3A'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            { className: type === 3 ? "current" : null },
+	            '\u5C0F\u7C73'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            { className: type === 4 ? "current" : null },
+	            '\u9B45\u65CF'
+	          ),
+	          _react2.default.createElement(
+	            'dd',
+	            { className: type === 5 ? "current" : null },
+	            'vivo'
+	          )
+	        ),
+	        _react2.default.createElement(_DetailDl2.default, { data: this.json[type] })
 	      );
 	    }
 	  }]);
