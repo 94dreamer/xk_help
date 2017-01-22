@@ -23400,13 +23400,20 @@
 	var Help = function (_Component) {
 	  _inherits(Help, _Component);
 
-	  function Help() {
+	  function Help(props) {
 	    _classCallCheck(this, Help);
 
-	    return _possibleConstructorReturn(this, (Help.__proto__ || Object.getPrototypeOf(Help)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Help.__proto__ || Object.getPrototypeOf(Help)).call(this, props));
+
+	    _this.state = {};
+	    _this.turn = _this.turn.bind(_this);
+	    return _this;
 	  }
 
 	  _createClass(Help, [{
+	    key: "turn",
+	    value: function turn() {}
+	  }, {
 	    key: "render",
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -23425,7 +23432,7 @@
 	            ),
 	            _react2.default.createElement(
 	              "dd",
-	              { className: "return_dd" },
+	              { className: "return_dd", onClick: this.props.turn },
 	              "1.IOS\u7CFB\u7EDF\u6743\u9650\u8BBE\u7F6E ",
 	              _react2.default.createElement(
 	                "a",
