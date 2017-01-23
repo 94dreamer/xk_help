@@ -10,25 +10,27 @@ export default class Help extends Component{
     this.turn=this.turn.bind(this);
   }
 
-  turn(){
-
+  turn(value){
+    console.log(value)
+    this.props.changePage(value);
   }
 
   render(){
+    const {changePage}=this.props;
     return (
       <ul className="help_ul">
         <li>
           <dl className="home_dl">
             <dt>一 权限设置</dt>
-            <dd className="return_dd" onClick={this.props.turn} >1.IOS系统权限设置 <a>&gt;</a></dd>
-            <dd className="return_dd">2.安卓系统权限设置 <a>&gt;</a></dd>
+            <dd className="return_dd"  onClick={()=>this.turn(11)}>1.IOS系统权限设置 <a>&gt;</a></dd>
+            <dd className="return_dd"  onClick={()=>this.turn(12)}>2.安卓系统权限设置 <a>&gt;</a></dd>
             <dd>注：应用过程中80%左右的问题是由于权限不够导致的，如遇问题请先检查权限设置是否完整正确</dd>
           </dl>
         </li>
         <li>
           <dl className="home_dl">
             <dt>二 登陆</dt>
-            <dd className="return_dd">1.登陆账号的来源 <a>&gt;</a></dd>
+            <dd className="return_dd" key={21} onClick={this.props.turn}>1.登陆账号的来源 <a>&gt;</a></dd>
             <dd className="return_dd">2.忘记密码 <a>&gt;</a></dd>
             <dd className="return_dd">3.接收不到验证码 <a>&gt;</a></dd>
           </dl>

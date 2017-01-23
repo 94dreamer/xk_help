@@ -17,4 +17,7 @@ preLoaders: [
     ]
 ```
 
-2. 
+2. 开发环境下因为模版编译到dist下导致react组建内的img的src引用一直有错
+
+
+

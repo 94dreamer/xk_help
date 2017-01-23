@@ -11,15 +11,24 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={}
+    this.changePage=this.changePage.bind(this);
     this.pageList={
-      0:<Help />,
+      0:<Help changePage={this.changePage} />,
       11:<DetailOne1 />,
       12:<DetailOne2 />
     }
   }
 
+  changePage(page){
+    console.log(this,page);
+    this.props.dispatch({
+      type:"CHANGE_PAGE",
+      page:page
+    })
+  }
+
   render(){
-    const {page} = this.props;
+    const {page,dispatch} = this.props;
     return (
       <div>
         <Header />

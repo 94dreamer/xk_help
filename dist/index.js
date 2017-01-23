@@ -23276,8 +23276,9 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 	    _this.state = {};
+	    _this.changePage = _this.changePage.bind(_this);
 	    _this.pageList = {
-	      0: _react2.default.createElement(_Help2.default, null),
+	      0: _react2.default.createElement(_Help2.default, { changePage: _this.changePage }),
 	      11: _react2.default.createElement(_DetailOne2.default, null),
 	      12: _react2.default.createElement(_DetailOne4.default, null)
 	    };
@@ -23285,9 +23286,20 @@
 	  }
 
 	  _createClass(App, [{
+	    key: 'changePage',
+	    value: function changePage(page) {
+	      console.log(this, page);
+	      this.props.dispatch({
+	        type: "CHANGE_PAGE",
+	        page: page
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var page = this.props.page;
+	      var _props = this.props,
+	          page = _props.page,
+	          dispatch = _props.dispatch;
 
 	      return _react2.default.createElement(
 	        'div',
@@ -23412,10 +23424,17 @@
 
 	  _createClass(Help, [{
 	    key: "turn",
-	    value: function turn() {}
+	    value: function turn(value) {
+	      console.log(value);
+	      this.props.changePage(value);
+	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
+	      var _this2 = this;
+
+	      var changePage = this.props.changePage;
+
 	      return _react2.default.createElement(
 	        "ul",
 	        { className: "help_ul" },
@@ -23432,7 +23451,9 @@
 	            ),
 	            _react2.default.createElement(
 	              "dd",
-	              { className: "return_dd", onClick: this.props.turn },
+	              { className: "return_dd", onClick: function onClick() {
+	                  return _this2.turn(11);
+	                } },
 	              "1.IOS\u7CFB\u7EDF\u6743\u9650\u8BBE\u7F6E ",
 	              _react2.default.createElement(
 	                "a",
@@ -23442,7 +23463,9 @@
 	            ),
 	            _react2.default.createElement(
 	              "dd",
-	              { className: "return_dd" },
+	              { className: "return_dd", onClick: function onClick() {
+	                  return _this2.turn(12);
+	                } },
 	              "2.\u5B89\u5353\u7CFB\u7EDF\u6743\u9650\u8BBE\u7F6E ",
 	              _react2.default.createElement(
 	                "a",
@@ -23470,7 +23493,7 @@
 	            ),
 	            _react2.default.createElement(
 	              "dd",
-	              { className: "return_dd" },
+	              { className: "return_dd", key: 21, onClick: this.props.turn },
 	              "1.\u767B\u9646\u8D26\u53F7\u7684\u6765\u6E90 ",
 	              _react2.default.createElement(
 	                "a",
@@ -24013,7 +24036,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/111.png', alt: '' })
+	              _react2.default.createElement('img', { src: '../img/111.png', alt: '' })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -24027,7 +24050,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/112.png', alt: '' })
+	              _react2.default.createElement('img', { src: './src/img/112.png', alt: '' })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -24041,7 +24064,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/113.png', alt: '' })
+	              _react2.default.createElement('img', { src: './src/img/113.png', alt: '' })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -24055,7 +24078,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/114.png', alt: '' })
+	              _react2.default.createElement('img', { src: '../src/img/114.png', alt: '' })
 	            )
 	          )
 	        ),
@@ -24078,7 +24101,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/115.png', alt: '' })
+	              _react2.default.createElement('img', { src: './src/img/115.png', alt: '' })
 	            )
 	          ),
 	          _react2.default.createElement(
@@ -24092,7 +24115,7 @@
 	            _react2.default.createElement(
 	              'div',
 	              null,
-	              _react2.default.createElement('img', { src: '.src/img/116.png', alt: '' })
+	              _react2.default.createElement('img', { src: './src/img/116.png', alt: '' })
 	            )
 	          )
 	        )

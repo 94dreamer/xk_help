@@ -40,6 +40,7 @@
     line-height: px2rem(40px);
     border-bottom:1px solid #b4b4b4;
     &.return_dd{
+      cursor: pointer;
       padding-left: px2rem(30px);
     }
     a{
