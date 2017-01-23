@@ -17,7 +17,7 @@ export default class DetailOne1 extends Component {
           <dt>IOS系统-信任销控APP</dt>
           <dd>
             <h4>第一步 进入设置页面，点击【通用】</h4>
-            <div><img src={'../img/111.png'} alt=""/></div>
+            <div></div>
           </dd>
           <dd>
             <h4>第二步 进入通用页面，点击【设备管理】</h4>

@@ -91,7 +91,7 @@
 	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./css/index.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var state = {
-	  page: 0
+	  page: 11
 	};
 
 	var store = (0, _configureStore2.default)(state);
@@ -24033,11 +24033,7 @@
 	              null,
 	              '\u7B2C\u4E00\u6B65 \u8FDB\u5165\u8BBE\u7F6E\u9875\u9762\uFF0C\u70B9\u51FB\u3010\u901A\u7528\u3011'
 	            ),
-	            _react2.default.createElement(
-	              'div',
-	              null,
-	              _react2.default.createElement('img', { src: '../img/111.png', alt: '' })
-	            )
+	            _react2.default.createElement('div', null)
 	          ),
 	          _react2.default.createElement(
 	            'dd',
