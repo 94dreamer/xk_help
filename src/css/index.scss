@@ -1,19 +1,19 @@
 @charset "utf-8";
 @import "./_com";
 
-.header_hd{
+.header_hd {
   height: px2rem(80px);
-  background:#dd3f39 ;
+  background: #dd3f39;
   color: #fff;
   font-size: px2rem(36px);
-  a{
+  a {
     color: #fff;
     position: absolute;
-    left:px2rem(30px);
+    left: px2rem(30px);
     line-height: px2rem(80px);
     font-weight: bold;
   }
-  h1{
+  h1 {
     height: 100%;
     line-height: px2rem(80px);
     text-align: center;
@@ -22,28 +22,28 @@
   }
 }
 
-.help_ul{
+.help_ul {
 
 }
 
-.home_dl{
+.home_dl {
   font-size: px2rem(28px);
-  dt{
+  dt {
     padding-left: px2rem(18px);
     background: #f4f4f8;
     height: px2rem(60px);
     line-height: px2rem(60px);
     font-weight: bold;
   }
-  dd{
+  dd {
     padding: px2rem(30px) 0 px2rem(30px) px2rem(18px);
     line-height: px2rem(40px);
-    border-bottom:1px solid #b4b4b4;
-    &.return_dd{
+    border-bottom: 1px solid #b4b4b4;
+    &.return_dd {
       cursor: pointer;
       padding-left: px2rem(30px);
     }
-    a{
+    a {
       color: #a0a0a0;
       float: right;
       font-weight: bold;
@@ -52,4 +52,18 @@
   }
 }
 
+.phone_dl {
+  dl{
+    clear: both;
+    width: 100%;
+  }
+  dd {
+    width: 20%;
+    float: left;
+    border: 1px solid gray;
+  }
+  .current{
+    border-color: red;
+  }
+}
 

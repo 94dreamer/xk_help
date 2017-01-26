@@ -91,7 +91,7 @@
 	__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./css/index.scss\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	var state = {
-	  page: 11
+	  page: 12
 	};
 
 	var store = (0, _configureStore2.default)(state);

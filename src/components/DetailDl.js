@@ -13,14 +13,14 @@ export default class DetailDl extends Component {
     const {data}=this.props;
     return (
       <div>
-        {React.Children.map(data, function (N) {
+        {data.map(function (N) {
           return (
-            <dl className="detail_dl">
-              <dt>N.title</dt>
-              {React.Children.map(N, (n) => {
+            <dl className="detail_dl" key={N.title}>
+              <dt>{N.title}</dt>
+              {N.content.map((n) => {
                 return (
-                  <dd>
-                    <h4>n.h4</h4>
+                  <dd key={n.h4}>
+                    <h4>{n.h4}</h4>
                     <div><img src={`.src/img/${n.img}.png`} alt=""/></div>
                   </dd>
                 )
@@ -32,3 +32,4 @@ export default class DetailDl extends Component {
     )
   }
 }
+

@@ -7,7 +7,10 @@ import Detail from '../components/DetailDl';
 export default class DetailOne1 extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      type:1
+    };
+    this.changeType=this.changeType.bind(this);
     this.json = {
       1: [{
         title: "安卓系统-权限设置",
@@ -107,17 +110,24 @@ export default class DetailOne1 extends Component {
     }
   }
 
+  changeType(type){
+    console.log(type)
+    this.setState({
+      type:type
+    })
+  }
+
   render() {
-    let type = 1;
+    let type = this.state.type;
     return (
       <div>
-        <dl>
+        <dl className="phone_dl">
           <dt>请选择使用的机型：</dt>
-          <dd className={type === 1 ? "current" : null}>三星</dd>
-          <dd className={type === 2 ? "current" : null}>华为</dd>
-          <dd className={type === 3 ? "current" : null}>小米</dd>
-          <dd className={type === 4 ? "current" : null}>魅族</dd>
-          <dd className={type === 5 ? "current" : null}>vivo</dd>
+          <dd className={type === 1 ? "current" : null} onClick={()=>{this.changeType(1)}}>三星</dd>
+          <dd className={type === 2 ? "current" : null} onClick={()=>{this.changeType(2)}}>华为</dd>
+          <dd className={type === 3 ? "current" : null} onClick={()=>{this.changeType(3)}}>小米</dd>
+          <dd className={type === 4 ? "current" : null} onClick={()=>{this.changeType(4)}}>魅族</dd>
+          <dd className={type === 5 ? "current" : null} onClick={()=>{this.changeType(5)}}>vivo</dd>
         </dl>
         <Detail data={this.json[type]}/>
       </div>

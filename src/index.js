@@ -11,7 +11,7 @@ import configureStore from './store/configureStore'
 import Root from './container/Root';
 
 const state={
-  page:11
+  page:12
 };
 
 const store=configureStore(state);
