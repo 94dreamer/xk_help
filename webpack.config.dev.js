@@ -9,11 +9,20 @@ var HtmlWebpackPlugin=require('html-webpack-plugin')
 
 
 const config = {
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
+    contentBase: './src',
+    port: 8080
+  },
   devtool:'cheap-eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/dev-server',
-    './src/index'
+    //'./src/index',
+    path.resolve(__dirname, './src/index.js')
   ],
   //entry:{//index: './src/index'//入口文件},
   output: {
@@ -98,10 +107,6 @@ const config = {
     // new webpack.optimize.OccurenceOrderPlugin(),
     // new webpack.optimize.DedupePlugin(), //删除类似的重复代码
     // new webpack.optimize.AggressiveMergingPlugin()//合并块  貌似这两个都没有什么卵用
-  ],
-  devServer:{
-    contentBase:'/dist',
-    hot:true
-  }
+  ]
 };
 module.exports = config;
