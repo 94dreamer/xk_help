@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
 
-export default class DetailOne1 extends Component {
+export default class DetailTwo3 extends Component {
   constructor(props) {
     super(props);
     this.state = {};

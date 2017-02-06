@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
 
-export default class DetailTwo1 extends Component {
+export default class DetailThree3 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,10 +19,10 @@ export default class DetailTwo1 extends Component {
     return (
       <div>
         <dl className="detail_dl">
-          <dt>登陆账号的来源</dt>
+          <dt>经纪人没有头像</dt>
           <dd>
-            <p>销控系统登陆的账号是入职时分配的工号，如果目前还没有工号或者输入工号后无法正常登陆，请联系入职培训时的人力。</p>
-            <p>目前销控系统<span className="red_span">仅支持按工号</span>进行登陆，不支持以手机号作为账号进行登陆！</p>
+            <p>只有付费且通过了【经纪人后台-诚信通审核】的经纪人才会展示头像。</p>
+            <p>如果经纪人是付费状态，但没有头像，请及时提醒经纪人提交诚信通审核。</p>
           </dd>
           <dd>
             <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>

@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
 
-export default class DetailTwo1 extends Component {
+export default class DetailThree4 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,10 +19,11 @@ export default class DetailTwo1 extends Component {
     return (
       <div>
         <dl className="detail_dl">
-          <dt>登陆账号的来源</dt>
+          <dt>如何创建门店</dt>
           <dd>
-            <p>销控系统登陆的账号是入职时分配的工号，如果目前还没有工号或者输入工号后无法正常登陆，请联系入职培训时的人力。</p>
-            <p>目前销控系统<span className="red_span">仅支持按工号</span>进行登陆，不支持以手机号作为账号进行登陆！</p>
+            <p>跑店过程中新开发的门店，可以直接通过销控APP进行创建。</p>
+            <p>但是为了避免重复创建，请先在打卡页面进行搜索，如果搜索不到该门店，再通过【新增门店】进行创建。</p>
+            <div><img src="./341.png" alt="如何创建门店"/></div>
           </dd>
           <dd>
             <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>

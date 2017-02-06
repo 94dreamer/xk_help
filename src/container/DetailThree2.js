@@ -4,7 +4,7 @@
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
 
-export default class DetailTwo1 extends Component {
+export default class DetailThree2 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,10 +19,10 @@ export default class DetailTwo1 extends Component {
     return (
       <div>
         <dl className="detail_dl">
-          <dt>登陆账号的来源</dt>
+          <dt>售前-经纪人列表找不到经纪人</dt>
           <dd>
-            <p>销控系统登陆的账号是入职时分配的工号，如果目前还没有工号或者输入工号后无法正常登陆，请联系入职培训时的人力。</p>
-            <p>目前销控系统<span className="red_span">仅支持按工号</span>进行登陆，不支持以手机号作为账号进行登陆！</p>
+            <p>售前门店列表里仅展示责任销售是您或者您签约过的经纪人。</p>
+            <p>如果线下业务上已经将这个经纪人分配给您，但是在销控里找不到这个经纪人，请联系销售助理在房友/OP 里将对应门店的责任销售设置为您。</p>
           </dd>
           <dd>
             <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
