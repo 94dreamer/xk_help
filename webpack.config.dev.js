@@ -9,11 +9,19 @@ var HtmlWebpackPlugin=require('html-webpack-plugin')
 
 
 const config = {
+  devServer: {
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    progress: true,
+    contentBase: './src',
+    port: 8080
+  },
   devtool:'cheap-eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/dev-server',
-    './src/index'
+    path.resolve(__dirname, './src/index.js')
   ],
   //entry:{//index: './src/index'//入口文件},
   output: {
