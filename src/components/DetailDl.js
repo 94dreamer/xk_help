@@ -21,7 +21,7 @@ export default class DetailDl extends Component {
                 return (
                   <dd key={n.h4}>
                     <h4>{n.h4}</h4>
-                    <div><img src={`.src/img/${n.img}.png`} alt=""/></div>
+                    <div><img src={`./img/${n.img}.png`} alt=""/></div>
                   </dd>
                 )
               })}

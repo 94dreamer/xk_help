@@ -68,7 +68,7 @@ class App extends Component {
     const {page, dispatch} = this.props;
     return (
       <div>
-        <Header />
+        <Header back={this.changePage}/>
         {this.pageList[page]}
       </div>
     )
