@@ -12,7 +12,7 @@ export default class Choose extends Component {
   render() {
     const {data}=this.props;
     return (
-      <div>
+      <div className="choose_box">
         <aside className="detail_choose"><a className="icon_help_top">有用 （999+）</a></aside>
         <aside ><a className="icon_help_bottom">没用 （12）</a></aside>
       </div>

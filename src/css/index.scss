@@ -110,11 +110,11 @@ $gray:#b4b4b4;
     p{
       font-size: px2rem(26px);
       text-indent: px2rem(52px);
-      padding: px2rem(20px);
+      padding: 0 px2rem(20px);
       line-height: px2rem(40px);
       span{color: $red}
       &:first-child{
-        margin-top: px2rem(20px);
+        margin-top: px2rem(40px);
       }
     }
   }
@@ -123,32 +123,48 @@ $gray:#b4b4b4;
     width: 100%;
     padding: px2rem(20px) px2rem(100px);
   }
-
-  aside{
-    a{
-      font-size: 28px;
-      color: #777777;
-      &:before{
-        display: inline-block;
-        height: px2rem(86px);
-        width: px2rem(86px);
-        background: url("../img/icon_help_top.png") no-repeat;
-      }
-    }
-    .icon_help_bottom{
-      &:before{
-        -webkit-transform: rotate(180deg);
-        -moz-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-        -o-transform: rotate(180deg);
-        transform: rotate(180deg);
-      }
-    }
-    &.detail_choose{
+  div.choose_box{
+    margin-top: px2rem(80px);
+    aside{
+      float: left;
+      width: 50%;
       a{
-        color: $red;
-        &:before{
-          background-image: url("../img/icon_help_top_choose.png");
+        text-align: right;
+        display: block;
+        position: relative;
+        margin-left: px2rem(110px);
+        font-size: 28px;
+        color: #777777;
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          top:px2rem(-28px);
+          left: px2rem(-12px);
+          height: px2rem(86px);
+          width: px2rem(86px);
+          background-size: 100% 100%;
+          background: url("../img/icon_help_top.png") no-repeat;
+        }
+      }
+      .icon_help_bottom{
+        margin-left: px2rem(0px);
+        text-align: center;
+        &::before{
+          left: px2rem(14px);
+          -webkit-transform: rotate(180deg);
+          -moz-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+          transform: rotate(180deg);
+        }
+      }
+      &.detail_choose{
+        a{
+          color: $red;
+          &::before{
+            background-image: url("../img/icon_help_top_choose.png");
+          }
         }
       }
     }
