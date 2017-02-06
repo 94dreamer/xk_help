@@ -28,8 +28,7 @@ export default class DetailThree5 extends Component {
             </div>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

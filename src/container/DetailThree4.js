@@ -11,11 +11,6 @@ export default class DetailThree4 extends Component {
     this.state = {};
   }
 
-  changeType(type) {
-    console.log(type)
-    this.setState({})
-  }
-
   render() {
     return (
       <div>
@@ -27,8 +22,7 @@ export default class DetailThree4 extends Component {
             <div><img src="./img/341.png" alt="如何创建门店"/></div>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

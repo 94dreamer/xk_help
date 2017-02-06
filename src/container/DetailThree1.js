@@ -27,8 +27,7 @@ export default class DetailThree1 extends Component {
             <p>如果是打过卡的门店需要填拜访记录，切换到售中-门店日程页面就可以看到该门店并且添加拜访记录了。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

@@ -26,8 +26,7 @@ export default class DetailThree8 extends Component {
             <p>如果在拜访过程中预约了下次拜访，可以直接在经纪人拜访记录中添加下次跟进的时间，这样系统会自动生成一条日程。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

@@ -25,8 +25,7 @@ export default class DetailFour3 extends Component {
             <p>左滑门店-添加拜访-选择【门店/店组拜访记录】即可添加对门店管理层的拜访记录</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

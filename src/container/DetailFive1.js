@@ -25,8 +25,7 @@ export default class DetailFive1 extends Component {
             <p>在首页-拜访统计，即可查看拜访的完成情况。这里的数据是每小时50分的时候更新一次，即在下午2点半的时候看到的数据是1点50分的数据，所以会有少量的差异。其中本周和本月的数据都是截止昨天的数据，不包含今天。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

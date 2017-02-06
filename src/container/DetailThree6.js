@@ -25,8 +25,7 @@ export default class DetailThree6 extends Component {
             <p>在售前-门店列表，左滑-编辑门店，修改门店人数即可。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

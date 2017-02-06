@@ -26,8 +26,7 @@ export default class DetailFour2 extends Component {
             <p>建议大家拜访完经纪人后立即添加拜访记录。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

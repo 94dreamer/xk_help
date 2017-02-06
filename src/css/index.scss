@@ -116,6 +116,10 @@ $gray:#b4b4b4;
       &:first-child{
         margin-top: px2rem(40px);
       }
+      &.no-indent{
+        text-indent: 0;
+        strong{}
+      }
     }
   }
   img {
@@ -124,7 +128,7 @@ $gray:#b4b4b4;
     padding: px2rem(20px) px2rem(100px);
   }
   div.choose_box{
-    margin-top: px2rem(80px);
+    margin: px2rem(80px) 0;
     aside{
       float: left;
       width: 50%;

@@ -26,8 +26,7 @@ export default class DetailThree3 extends Component {
             <p>如果经纪人是付费状态，但没有头像，请及时提醒经纪人提交诚信通审核。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

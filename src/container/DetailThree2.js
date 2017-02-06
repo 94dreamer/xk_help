@@ -26,8 +26,7 @@ export default class DetailThree2 extends Component {
             <p>如果线下业务上已经将这个经纪人分配给您，但是在销控里找不到这个经纪人，请联系销售助理在房友/OP 里将对应门店的责任销售设置为您。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>
