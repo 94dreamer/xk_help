@@ -3,16 +3,12 @@
  */
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
+import Choose from '../components/Choose';
 
 export default class DetailTwo1 extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-  }
-
-  changeType(type) {
-    console.log(type)
-    this.setState({})
   }
 
   render() {
@@ -25,8 +21,7 @@ export default class DetailTwo1 extends Component {
             <p>目前销控系统<span className="red_span">仅支持按工号</span>进行登陆，不支持以手机号作为账号进行登陆！</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

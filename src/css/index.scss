@@ -63,7 +63,6 @@ $gray:#b4b4b4;
   dt {
     font-size: px2rem(26px);
     line-height: px2rem(86px);
-    margin-left: px2rem(20px);
     clear: both;
     width: 100%;
     font-weight: bold;
@@ -108,11 +107,51 @@ $gray:#b4b4b4;
       border-left: px2rem(24px) solid $red;
       font-size: px2rem(24px);
     }
+    p{
+      font-size: px2rem(26px);
+      text-indent: px2rem(52px);
+      padding: px2rem(20px);
+      line-height: px2rem(40px);
+      span{color: $red}
+      &:first-child{
+        margin-top: px2rem(20px);
+      }
+    }
   }
   img {
     display: block;
     width: 100%;
     padding: px2rem(20px) px2rem(100px);
+  }
+
+  aside{
+    a{
+      font-size: 28px;
+      color: #777777;
+      &:before{
+        display: inline-block;
+        height: px2rem(86px);
+        width: px2rem(86px);
+        background: url("../img/icon_help_top.png") no-repeat;
+      }
+    }
+    .icon_help_bottom{
+      &:before{
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+    &.detail_choose{
+      a{
+        color: $red;
+        &:before{
+          background-image: url("../img/icon_help_top_choose.png");
+        }
+      }
+    }
   }
 }
 

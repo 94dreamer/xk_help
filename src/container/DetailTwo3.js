@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
+import Choose from '../components/Choose';
 
 export default class DetailTwo3 extends Component {
   constructor(props) {
@@ -27,8 +28,7 @@ export default class DetailTwo3 extends Component {
             <p>解决方法：在【全国销售管理PC/APP问题反馈】微信群中进行反馈，提供自己的工号和最新的手机号，产品人员会帮您进行处理。</p>
           </dd>
           <dd>
-            <aside className="detail_choose"><a className="icon_help_top">有用（999+）</a></aside>
-            <aside><a className="icon_help_bottom">没用（12）</a></aside>
+            <Choose />
           </dd>
         </dl>
       </div>

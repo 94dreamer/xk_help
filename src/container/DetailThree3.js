@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
+import Choose from '../components/Choose';
 
 export default class DetailThree3 extends Component {
   constructor(props) {
