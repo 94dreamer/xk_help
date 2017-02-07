@@ -44,15 +44,23 @@ $gray:#b4b4b4;
     padding: px2rem(30px) 0 px2rem(30px) px2rem(18px);
     line-height: px2rem(40px);
     border-bottom: 1px solid $gray;
+    &:last-child{
+      border-bottom: none;
+    }
     &.return_dd {
       cursor: pointer;
       padding-left: px2rem(30px);
-    }
-    a {
-      color: #a0a0a0;
-      float: right;
-      font-weight: bold;
-      margin-right: px2rem(40px);
+      position: relative;
+      &::after{
+        content: "";
+        position: absolute;
+        background-size: 100% 100%;
+        background: url("../img/icon_return.png") no-repeat;
+        height: px2rem(50px);
+        width: px2rem(50px);
+        top:px2rem(25px);
+        right: px2rem(40px);
+      }
     }
   }
 }
@@ -133,10 +141,10 @@ $gray:#b4b4b4;
       float: left;
       width: 50%;
       a{
-        text-align: right;
+        text-align: left;
         display: block;
         position: relative;
-        margin-left: px2rem(110px);
+        padding-left: px2rem(180px);
         font-size: 28px;
         color: #777777;
         &::before{
@@ -144,7 +152,7 @@ $gray:#b4b4b4;
           display: block;
           position: absolute;
           top:px2rem(-28px);
-          left: px2rem(-12px);
+          left: px2rem(80px);
           height: px2rem(86px);
           width: px2rem(86px);
           background-size: 100% 100%;
@@ -152,8 +160,8 @@ $gray:#b4b4b4;
         }
       }
       .icon_help_bottom{
-        margin-left: px2rem(0px);
-        text-align: center;
+        padding-left: px2rem(110px);
+        text-align: left;
         &::before{
           left: px2rem(14px);
           -webkit-transform: rotate(180deg);

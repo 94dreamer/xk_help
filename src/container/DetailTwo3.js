@@ -28,7 +28,7 @@ export default class DetailTwo3 extends Component {
             <p className="no-indent"><strong>解决方法：</strong>在【全国销售管理PC/APP问题反馈】微信群中进行反馈，提供自己的工号和最新的手机号，产品人员会帮您进行处理。</p>
           </dd>
           <dd>
-            <Choose />
+            <Choose/>
           </dd>
         </dl>
       </div>

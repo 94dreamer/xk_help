@@ -3,17 +3,17 @@
  */
 import {combineReducers} from 'redux';
 
-function page(state=0,action) {
+function guid_id(state=0,action) {
   switch (action.type){
     case "CHANGE_PAGE":
-      return action.page;
+      return action.guid_id;
     default:
       return state;
   }
 }
 
 const rootReducer=combineReducers({
-  page
+  guid_id
 });
 
 export default rootReducer;

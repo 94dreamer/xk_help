@@ -6,15 +6,79 @@ import React, {Component} from 'react';
 export default class Choose extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      num_useful:0,
+      num_useless:0,
+      is_click:0
+    }
+    this.upguid=this.upguid.bind(this);
+  }
+
+  componentDidMount() {
+    this.getAjax=$.ajax({
+      url: "/apikongv2/getguidinfo/",
+      type: "GET",
+      data: Object.assign({},window.param),
+      success: function (res) {
+        this.getAjax=null
+        var res=(typeof res==="string")?JSON.parse(res):res;
+        if (res.result.code == 0) {
+          this.setState({
+            num_useful:res.result.data.num_useful,
+            num_useless:res.result.data.num_useless
+          })
+        }else{
+          console.error(res.result.message)
+        }
+      }.bind(this)
+    })
+  }
+
+  componentWillUnmount(){
+    this.getAjax && this.getAjax.abort()
+    this.postAjax && this.postAjax.abort()
+  }
+
+  upguid(is_use){
+    this.postAjax=$.ajax({
+      url: "/apikongv2/upguid/",
+      type: "GET",
+      data: Object.assign({},window.param,{"is_use":is_use}),
+      success: function (res) {
+        this.getAjax=null
+        var res=(typeof res==="string")?JSON.parse(res):res;
+        if (res.result.code == 0) {
+          if(is_use){
+            this.setState({
+              num_useful:this.state.num_useful+1,
+              is_click:1,
+              is_use:1
+            })
+          }else{
+            this.setState({
+              num_useless:this.state.num_useless+1,
+              is_click:1,
+              is_use:0
+            })
+          }
+        }else{
+          console.error(res.result.message)
+        }
+      }.bind(this)
+    })
   }
 
   render() {
-    const {data}=this.props;
+    var top = this.state.num_useful;
+    var bot = this.state.num_useless;
+    var is_click=this.state.is_click;
+    var is_use=this.state.is_use;
+    top = top > 999 ? "999+" : top;
+    bot = bot > 999 ? "999+" : bot;
     return (
       <div className="choose_box clearfix">
-        <aside className="detail_choose"><a className="icon_help_top">有用 （999+）</a></aside>
-        <aside ><a className="icon_help_bottom">没用 （12）</a></aside>
+        <aside className={(is_click && is_use)?"detail_choose":null}><a className="icon_help_top" onClick={()=>this.upguid(1)}>有用 （{top}）</a></aside>
+        <aside className={(is_click && !is_use)?"detail_choose":null}><a className="icon_help_bottom" onClick={()=>this.upguid(0)}>没用 （{bot}）</a></aside>
       </div>
     )
   }

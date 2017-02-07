@@ -32,44 +32,50 @@ class App extends Component {
     this.state = {}
     this.changePage = this.changePage.bind(this);
     this.pageList = {
-      0: <Help changePage={this.changePage}/>,
-      11: <DetailOne1 />,
-      12: <DetailOne2 />,
-      21: <DetailTwo1 />,
-      22: <DetailTwo2 />,
-      23: <DetailTwo3 />,
-      31: <DetailThree1 />,
-      32: <DetailThree2 />,
-      33: <DetailThree3 />,
-      34: <DetailThree4 />,
-      35: <DetailThree5 />,
-      36: <DetailThree6 />,
-      37: <DetailThree7 />,
-      38: <DetailThree8 />,
-      41: <DetailFour1/>,
-      42: <DetailFour2/>,
-      43: <DetailFour3/>,
-      44: <DetailFour4/>,
-      45: <DetailFour5/>,
-      51: <DetailFive1 />,
-      52: <DetailFive2 />
+      "0": <Help changePage={this.changePage}/>,
+      "1-1": <DetailOne1 />,
+      "1-2": <DetailOne2 />,
+      "2-1": <DetailTwo1 />,
+      "2-2": <DetailTwo2 />,
+      "2-3": <DetailTwo3 />,
+      "3-1": <DetailThree1 />,
+      "3-2": <DetailThree2 />,
+      "3-3": <DetailThree3 />,
+      "3-4": <DetailThree4 />,
+      "3-5": <DetailThree5 />,
+      "3-6": <DetailThree6 />,
+      "3-7": <DetailThree7 />,
+      "3-8": <DetailThree8 />,
+      "4-1": <DetailFour1/>,
+      "4-2": <DetailFour2/>,
+      "4-3": <DetailFour3/>,
+      "4-4": <DetailFour4/>,
+      "4-5": <DetailFour5/>,
+      "5-1": <DetailFive1 />,
+      "5-2": <DetailFive2 />
     }
   }
 
-  changePage(page) {
-    console.log(this, page);
-    this.props.dispatch({
-      type: "CHANGE_PAGE",
-      page: page
-    })
+  changePage(guid_id) {
+    console.log(guid_id);
+
+    if(process.env.NODE_ENV === "development"){
+      this.props.dispatch({
+        type: "CHANGE_PAGE",
+        guid_id: guid_id
+      })
+    }else{
+      window.location.href=window.changeURLPar(window.location.href,"guid_id",guid_id);
+    }
   }
 
   render() {
-    const {page, dispatch} = this.props;
+    console.log(process.env.NODE_ENV);
+    const {guid_id, dispatch} = this.props;
     return (
       <div>
-        <Header back={this.changePage}/>
-        {this.pageList[page]}
+        {process.env.NODE_ENV === "development" ? <Header back={this.changePage} guid_id={guid_id}/> : null}
+        {this.pageList[guid_id]}
       </div>
     )
   }
@@ -77,7 +83,7 @@ class App extends Component {
 
 function select(state) {
   return {
-    page: state.page
+    guid_id: state.guid_id
   }
 }
 

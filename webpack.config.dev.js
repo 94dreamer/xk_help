@@ -14,7 +14,7 @@ const config = {
     hot: true,
     inline: true,
     progress: true,
-    contentBase: './src',
+    contentBase: './',
     port: 8080
   },
   devtool:'cheap-eval-source-map',
