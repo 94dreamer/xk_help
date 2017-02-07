@@ -41,7 +41,7 @@ $gray:#b4b4b4;
     font-weight: bold;
   }
   dd {
-    padding: px2rem(30px) 0 px2rem(30px) px2rem(18px);
+    padding: px2rem(30px) px2rem(18px);
     line-height: px2rem(40px);
     border-bottom: 1px solid $gray;
     &:last-child{
@@ -79,8 +79,8 @@ $gray:#b4b4b4;
     color: $gray;
     text-align: center;
     margin-right:5%;
-    height: 70px;
-    line-height: 70px;
+    height: px2rem(70px);
+    line-height: px2rem(70px);
     width: 16%;
     float: left;
     border: 1px solid $gray;
