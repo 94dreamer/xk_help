@@ -25,7 +25,9 @@ export default class Choose extends Component {
         if (res.result.code == 0) {
           this.setState({
             num_useful:res.result.data.num_useful,
-            num_useless:res.result.data.num_useless
+            num_useless:res.result.data.num_useless,
+            is_click:res.result.data.is_click,
+            is_use:res.result.data.is_use
           })
         }else{
           console.error(res.result.message)
@@ -40,6 +42,10 @@ export default class Choose extends Component {
   }
 
   upguid(is_use){
+    if (this.state.is_click>0){
+      return false;
+    }
+    this.postAjax && this.postAjax.abort();
     this.postAjax=$.ajax({
       url: "/apikongv2/upguid/",
       type: "GET",
@@ -50,13 +56,13 @@ export default class Choose extends Component {
         if (res.result.code == 0) {
           if(is_use){
             this.setState({
-              num_useful:this.state.num_useful+1,
+              num_useful:this.state.num_useful-(-1),
               is_click:1,
               is_use:1
             })
           }else{
             this.setState({
-              num_useless:this.state.num_useless+1,
+              num_useless:this.state.num_useless-(-1),
               is_click:1,
               is_use:0
             })
@@ -77,8 +83,8 @@ export default class Choose extends Component {
     bot = bot > 999 ? "999+" : bot;
     return (
       <div className="choose_box clearfix">
-        <aside className={(is_click && is_use)?"detail_choose":null}><a className="icon_help_top" onClick={()=>this.upguid(1)}>有用 （{top}）</a></aside>
-        <aside className={(is_click && !is_use)?"detail_choose":null}><a className="icon_help_bottom" onClick={()=>this.upguid(0)}>没用 （{bot}）</a></aside>
+        <aside className={(is_click>0 && is_use>0)?"detail_choose":null}><a className="icon_help_top" onClick={()=>this.upguid(1)}>有用 （{top}）</a></aside>
+        <aside className={(is_click>0 && is_use==0)?"detail_choose":null}><a className="icon_help_bottom" onClick={()=>this.upguid(0)}>没用 （{bot}）</a></aside>
       </div>
     )
   }

@@ -24,7 +24,7 @@ export default class DetailThree5 extends Component {
             <p>下店过程中发现该门店新来了一个经纪人，可以直接通过销控APP进行新增。</p>
             <p>在门店列表点击进入门店详情页，切换到经纪人页签，先进行搜索。如果搜索不到该经纪人，再通过【新增】进行创建。</p>
             <div>
-              <img src="./src/img/351.png" alt="如何新增经纪人"/>
+              <img src={`${window.resurl}/src/img/351.png`} alt="如何新增经纪人"/>
             </div>
           </dd>
           <dd>

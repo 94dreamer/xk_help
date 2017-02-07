@@ -13,7 +13,7 @@ const config = {
     path: `${__dirname}/dist`,
     filename: '[name].js',
     chunkFilename: 'chunk[id].js?ver' + new Date().getTime(),
-    publicPath: 'http://res2.esf.leju.com/xk_help/dist/'
+    publicPath: 'http://res2.esf.leju.com/xk_help/'
   },
   resolve: {
     alias: {//它的作用是把用户的一个请求重定向到另一个路径

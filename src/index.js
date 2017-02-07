@@ -33,7 +33,7 @@ window.changeURLPar = function (url, ref, value) {
   var modify = "0";
   if (str.indexOf('&') != -1) {
     arr = str.split('&');
-    for (i in arr) {
+    for (var i in arr) {
       if (arr[i].split('=')[0] == ref) {
         setparam = value;
         modify = "1";
@@ -74,8 +74,11 @@ window.param={
   citycode:getQueryString("citycode"),
   jobid:getQueryString("jobid"),
   token:getQueryString("token"),
-  guid_id:getQueryString("guid_id")
+  guid_id:getQueryString("guid_id"),
+  secretchannel:"sina"
 };
+
+window.resurl="http://res2.esf.leju.com/xk_help/";
 
 const state = {
   guid_id: window.param.guid_id || 0
