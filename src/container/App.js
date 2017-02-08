@@ -25,6 +25,9 @@ import DetailFour4 from './DetailFour4';
 import DetailFour5 from './DetailFour5';
 import DetailFive1 from './DetailFive1';
 import DetailFive2 from './DetailFive2';
+import Update from './Update';
+import Umessage from './Umessage';
+import NotFound from './NotFound';
 
 class App extends Component {
   constructor(props) {
@@ -52,20 +55,23 @@ class App extends Component {
       "4-4": <DetailFour4/>,
       "4-5": <DetailFour5/>,
       "5-1": <DetailFive1 />,
-      "5-2": <DetailFive2 />
+      "5-2": <DetailFive2 />,
+      "update": <Update changePage={this.changePage}/>,
+      "u-1": <Umessage />,
+      "NotFound":<NotFound />
     }
   }
 
   changePage(guid_id) {
     console.log(guid_id);
 
-    if(process.env.NODE_ENV === "development"){
+    if (process.env.NODE_ENV === "development") {
       this.props.dispatch({
         type: "CHANGE_PAGE",
         guid_id: guid_id
       })
-    }else{
-      window.location.href=window.changeURLPar(window.location.href,"guid_id",guid_id);
+    } else {
+      window.location.href = window.changeURLPar(window.location.href, "guid_id", guid_id);
     }
   }
 
@@ -75,7 +81,7 @@ class App extends Component {
     return (
       <div>
         {process.env.NODE_ENV === "development" ? <Header back={this.changePage} guid_id={guid_id}/> : null}
-        {this.pageList[guid_id]}
+        {this.pageList[guid_id]?this.pageList[guid_id]:this.pageList["NotFound"]}
       </div>
     )
   }

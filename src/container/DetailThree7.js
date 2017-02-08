@@ -11,10 +11,6 @@ export default class DetailThree7 extends Component {
     this.state = {};
   }
 
-  changeType(type) {
-    console.log(type)
-    this.setState({})
-  }
 
   render() {
     return (
