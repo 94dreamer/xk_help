@@ -27,6 +27,7 @@ export default class DetailThree7 extends Component {
             <p>转移条件：</p>
             <p>1.新增的经纪人与原有经纪人的姓名+电话相同</p>
             <p>2.经纪人在原门店下没有公费开通的端口</p>
+            <p>3.经纪人原店组和新店组的名称不能相同</p>
             <p>4.原门店与新门店的责任销售都是当前销售</p>
           </dd>
           <dd>

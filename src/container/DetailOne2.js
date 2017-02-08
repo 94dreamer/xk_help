@@ -91,7 +91,7 @@ export default class DetailOne2 extends Component {
       5: [{
         title: "安卓系统-权限设置",
         content: [{
-          h4: "第一步  打开【I管家】",
+          h4: "第一步  打开【i管家】",
           img: "1220"
         }, {
           h4: "第二步  进入i管家页面，点击【软件管理】",
@@ -103,7 +103,7 @@ export default class DetailOne2 extends Component {
           h4: "第四步  进入软件权限管理页面，点击【销售管理】",
           img: "1223"
         }, {
-          h4: "第五步 信任该软件，并将所有权限打卡",
+          h4: "第五步 信任该软件，并将所有权限打开",
           img: "1224"
         }]
       }]

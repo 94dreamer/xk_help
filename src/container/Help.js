@@ -28,8 +28,8 @@ export default class Help extends Component {
         </li>
         <li>
           <dl className="home_dl">
-            <dt>二 登陆</dt>
-            <dd className="return_dd" onClick={() => this.turn('2-1')}>1.登陆账号的来源 </dd>
+            <dt>二 登录</dt>
+            <dd className="return_dd" onClick={() => this.turn('2-1')}>1.登录账号的来源 </dd>
             <dd className="return_dd" onClick={() => this.turn('2-2')}>2.忘记密码 </dd>
             <dd className="return_dd" onClick={() => this.turn('2-3')}>3.接收不到验证码 </dd>
           </dl>
