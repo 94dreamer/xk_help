@@ -154,48 +154,49 @@ $gray: #b4b4b4;
     width: 100%;
     padding: px2rem(20px) px2rem(100px);
   }
-  div.choose_box {
-    margin: px2rem(80px) 0;
-    aside {
-      float: left;
-      width: 50%;
-      a {
-        text-align: left;
+}
+
+div.choose_box {
+  margin: px2rem(80px) 0;
+  aside {
+    float: left;
+    width: 50%;
+    a {
+      text-align: left;
+      display: block;
+      position: relative;
+      padding-left: px2rem(180px);
+      font-size: px2rem(28px);
+      color: #777777;
+      &::before {
+        content: "";
         display: block;
-        position: relative;
-        padding-left: px2rem(180px);
-        font-size: px2rem(28px);
-        color: #777777;
-        &::before {
-          content: "";
-          display: block;
-          position: absolute;
-          top: px2rem(-28px);
-          left: px2rem(80px);
-          height: px2rem(86px);
-          width: px2rem(86px);
-          background: url("../img/icon_help_top.png") no-repeat center;
-          background-size: 100% 100%;
-        }
+        position: absolute;
+        top: px2rem(-28px);
+        left: px2rem(80px);
+        height: px2rem(86px);
+        width: px2rem(86px);
+        background: url("../img/icon_help_top.png") no-repeat center;
+        background-size: 100% 100%;
       }
-      .icon_help_bottom {
-        padding-left: px2rem(110px);
-        text-align: left;
-        &::before {
-          left: px2rem(14px);
-          -webkit-transform: rotate(180deg);
-          -moz-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-          -o-transform: rotate(180deg);
-          transform: rotate(180deg);
-        }
+    }
+    .icon_help_bottom {
+      padding-left: px2rem(110px);
+      text-align: left;
+      &::before {
+        left: px2rem(14px);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
       }
-      &.detail_choose {
-        a {
-          color: $red;
-          &::before {
-            background-image: url("../img/icon_help_top_choose.png");
-          }
+    }
+    &.detail_choose {
+      a {
+        color: $red;
+        &::before {
+          background-image: url("../img/icon_help_top_choose.png");
         }
       }
     }
@@ -218,6 +219,12 @@ $gray: #b4b4b4;
     line-height: px2rem(40px);
     span {
       color: $red;
+    }
+    img {
+      margin-bottom: px2rem(10px);
+      width: 100%;
+      display: block;
+      padding-right: px2rem(45px);
     }
   }
 }

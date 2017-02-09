@@ -3,6 +3,8 @@
  */
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
+import Choose from '../components/Choose';
+
 
 
 export default class DetailOne1 extends Component {
@@ -44,6 +46,7 @@ export default class DetailOne1 extends Component {
             <div><img src={`${window.resurl}/src/img/116.png`} alt=""/></div>
           </dd>
         </dl>
+        <Choose />
       </div>
     )
   }

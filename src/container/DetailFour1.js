@@ -21,7 +21,7 @@ export default class DetailFour1 extends Component {
             <p className="no-indent"><strong>现象一：</strong>打卡页面空白，提示“定位失败”。</p>
             <p className="no-indent"><strong>解决方法：</strong>入门帮助-权限设置，将权限重新设置。</p>
             <p className="no-indent"><br/><strong>现象二：</strong>提示“打卡失败！请在门店100米范围内打卡”</p>
-            <p className="no-indent"><strong>解决方法：</strong>请依次尝试一下操作</p>
+            <p className="no-indent"><strong>解决方法：</strong>请依次尝试以下操作</p>
             <p className="no-indent">1）打开GPS定位功能 <br/>
               2）点击打卡界面左下角的定位按钮，重新获取定位 <br/>
               3）重新开启4G网络 <br/>

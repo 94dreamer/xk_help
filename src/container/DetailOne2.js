@@ -3,6 +3,7 @@
  */
 import React, {Component} from 'react';
 import Detail from '../components/DetailDl';
+import Choose from '../components/Choose';
 
 export default class DetailOne2 extends Component {
   constructor(props) {
@@ -130,6 +131,7 @@ export default class DetailOne2 extends Component {
           <dd className={type === 5 ? "current" : null} onClick={()=>{this.changeType(5)}}>vivo</dd>
         </dl>
         <Detail data={this.json[type]}/>
+        <Choose/>
       </div>
     )
   }

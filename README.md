@@ -42,4 +42,10 @@ devServer: {
 ```
 
 
+3. android 下部分浏览器特性低，貌似不支持 Object.assign ，JSON.parse还是支持的
+
+原因是 babel不会自动解析ES6默认语法，需要引入
+
+解决办法  让babel转移assign
+
 

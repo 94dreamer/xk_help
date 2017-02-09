@@ -10,6 +10,10 @@ export default class Update extends Component {
     this.turn = this.turn.bind(this);
   }
 
+  componentWillMount(){
+    $("title").html("更新通知");
+  }
+
   turn(value) {
     this.props.changePage(value);
   }
@@ -21,8 +25,7 @@ export default class Update extends Component {
         <li>
           <dl className="home_dl">
             <dt className="dn"></dt>
-            <dd className="return_dd" onClick={() => this.turn('u-1')}>销控APP 1.5.0 更新内容（2017-01-01)</dd>
-            <dd className="return_dd" onClick={() => this.turn('u-2')}>销控APP 1.4.6 更新内容（2016-12-15) </dd>
+            <dd className="return_dd" onClick={() => this.turn('u-1')}>销控APP 1.5.2 更新内容（2017-01-01)</dd>
           </dl>
         </li>
       </ul>

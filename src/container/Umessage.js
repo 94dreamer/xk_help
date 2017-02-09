@@ -10,6 +10,10 @@ export default class Umessage extends Component {
     this.turn = this.turn.bind(this);
   }
 
+  componentWillMount(){
+    $("title").html("销控APP1.5.2更新内容");
+  }
+
   turn(value) {
     this.props.changePage(value);
   }
@@ -20,16 +24,28 @@ export default class Umessage extends Component {
       <ul className="message_ul">
         <li>
           <dl className="">
-            <dt>1.增加【创建门店】功能</dt>
-            <dd>一线的销售人员在跑店过程中如发现系统中没有的新门店，可直接通过APP创建门店。创建后该门店的责任销售默认为当前创建用户，经理及经理级以上的用户可以通过编辑门店对责任销售进行调整。</dd>
+            <dt>一  地图优化</dt>
+            <dd>1.门店地图：在区域和板块级别展示门店数量，板块级别以下展示明细门店。点击门店，可左划加入日程，方便大家按门店位置安排计划。
+              <br/>2.日程地图：经理及经理以上级别查看分组和部门数据时，在区域和板块级别展示门店数量，板块级别以下展示明细门店。
+              <img src={`${window.resurl}/src/img/1.5.2-1.png`} alt=""/>
+            </dd>
           </dl>
         </li>
         <li>
           <dl>
-            <dt>2. 增加【经纪人转移】功能</dt>
-            <dd>考虑到经纪人换店情况非常频繁，同时为了避免重复创建导致系统中出现大量的垃圾数据，新增了此功能。销售在拜访过程中如果发现这个经纪人从A店转到了B店，在B店内新增经纪人时，系统会自动进行校验，满足转移条件即可将该经纪人直接从A店转移到B店。<span>【其他不满足经纪人转移条件的情况，还是可以在app上进行重复创建，请知悉！】</span>
-              <br/><strong>经纪人转移的条件：</strong>
-              <br/>姓名和手机号同时重复 &不在同一店组&原门店和现门店的责任销售均为当前用户或当前用户的下级&没有公费开通端口。</dd>
+            <dt>二  打卡页面添加-门店人数</dt>
+            <dd>现系统中存在大量重复的门店，为了防止打卡时选错门店，新增此功能，便于大家区分。
+              <img src={`${window.resurl}/src/img/1.5.2-2.png`} alt=""/>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl>
+            <dt>三  新增【我的】界面</dt>
+            <dd>1.更新通知：展示每个新版本的更新内容。
+              <br/>2.入门帮助：常见问题处理方案。
+              <br/>3.意见反馈：使用过程中的操作咨询、BUG或优化建议。
+            </dd>
           </dl>
         </li>
       </ul>
