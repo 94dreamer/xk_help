@@ -11,7 +11,7 @@ export default class Umessage extends Component {
   }
 
   componentWillMount(){
-    $("title").html("销控APP1.5.2更新内容");
+    $("title").html("销控APP1.5.1更新内容");
   }
 
   turn(value) {

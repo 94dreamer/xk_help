@@ -18,6 +18,9 @@ export default class Choose extends Component {
     this.getAjax = $.ajax({
       url: "/apikongv2/getguidinfo/",
       type: "GET",
+      headers: {
+        'version': '1.6.1'
+      },
       data: $.extend({}, window.param),
       success: function (res) {
         this.getAjax = null;

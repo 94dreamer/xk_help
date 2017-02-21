@@ -27,6 +27,7 @@ import DetailFive1 from './DetailFive1';
 import DetailFive2 from './DetailFive2';
 import Update from './Update';
 import Umessage from './Umessage';
+import Umessage2 from './Umessage2';
 import NotFound from './NotFound';
 
 class App extends Component {
@@ -58,6 +59,7 @@ class App extends Component {
       "5-2": <DetailFive2 />,
       "update": <Update changePage={this.changePage}/>,
       "u-1": <Umessage />,
+      "u-2": <Umessage2 />,
       "NotFound":<NotFound />
     }
   }

@@ -11,7 +11,7 @@ React/Sass
 
 ### 填过的坑
 
-1. 一编译就自动运行了eslint
+#### 1. 一编译就自动运行了eslint
 
 因为我在webpack.config.js里面写了
 
@@ -26,7 +26,7 @@ preLoaders: [
     ]
 ```
 
-2. 开发环境下因为模版编译到dist下导致react组建内的img的src引用一直有错
+#### 2. 开发环境下因为模版编译到dist下导致react组建内的img的src引用一直有错
 
 解决办法是webpack-dev-server配置更改,contentBase由`./dist`改成了`./src`。
 
@@ -42,10 +42,25 @@ devServer: {
 ```
 
 
-3. android 下部分浏览器特性低，貌似不支持 Object.assign ，JSON.parse还是支持的
+#### 3. 部分android机内置浏览器支持JS特性低，不支持 Object.assign的ES6语法 ，JSON.parse这种ES5的api还是支持的。
 
-原因是 babel不会自动解析ES6默认语法，需要引入
+原因是 Babel 默认只转换新的JavaScript句法，而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如Obejct.assign）都不会转码。Babel不转码的API非常多，详细清单可以查看 [definitions.js](https://github.com/babel/babel/blob/master/packages/babel-plugin-transform-runtime/src/definitions.js) 文件
 
-解决办法  让babel转移assign
+解决办法：让Babel转译这些ES6的API，我们安装这个插件：
+
+`npm install --save-dev babel-polyfill`
+
+然后，在需要使用的文件顶部引入
+
+`import "babel-polyfill"`或者`require('babel-polyfill')`
+
+webpack.config.js中这样：
+
+```
+module.exports = {
+	entry:['babel-polyfill','./app/js']
+}
+```
+
 
 

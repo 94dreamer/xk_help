@@ -74,8 +74,8 @@ window.param={
   citycode:getQueryString("citycode"),
   jobid:getQueryString("jobid"),
   token:getQueryString("token"),
-  guid_id:getQueryString("guid_id"),
-  secretchannel:"sina"
+  guid_id:getQueryString("guid_id")
+  //, secretchannel:"sina"
 };
 
 window.resurl="http://res2.esf.leju.com/xk_help/";
